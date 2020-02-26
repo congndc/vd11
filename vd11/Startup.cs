@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using vd11.Context;
+using vd11.Repository;
+using vd11.Service;
 
 namespace vd11
 {
@@ -28,6 +30,9 @@ namespace vd11
             services.AddDbContext<NewContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DataCT")));
             services.AddControllersWithViews();
+            services.AddTransient<ICongTy, CongTyRepository>();
+            services.AddTransient<INhanVien, NhanVienRepository>();
+            services.AddTransient<IThamNien, ThamNienRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace vd11.Models
 {
+
     public enum ThamNienLam
     {
         
@@ -16,6 +17,13 @@ namespace vd11.Models
     }
     public class ThamNien
     {
+        public ThamNien()
+        {
+            CongTy = new HashSet<CongTy>();
+            NhanVien = new HashSet<NhanVien>();
+        }
+       
+       
         [Key]
         public int ThamNienID { get; set; }
         [DisplayName("Thâm Niên Làm Việc")]
