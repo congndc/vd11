@@ -25,33 +25,36 @@
             </div>
             <div class="form-group">
                 <label asp-for="GioiTinh" class="control-label"></label>
-                @*---------------Dropdown List---------------------*@
-                <select asp-for="ChucVu" class="form-control">
+                <select asp-for="GioiTinh" class="form-control">
+
                     <option value="Nam">Nam</option>
                     <option value="Nữ">Nữ</option>
                     <option value="ThứBa">ThứBa</option>
+
                 </select>
-                @*---------------Dropdown List---------------------*@
                 <span asp-validation-for="GioiTinh" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ChucVu" class="control-label"></label>
                 @*---------------Dropdown List---------------------*@
                 <select asp-for="ChucVu" class="form-control">
+
                     <option value="Boss">Boss</option>
                     <option value="Staff">Staff</option>
                 </select>
-                @*---------------Dropdown List---------------------*@
+                @*---------------Dropdown List---------------------*@      
                 <span asp-validation-for="ChucVu" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="VeHuu" class="control-label"></label>
                 @*---------------Dropdown List---------------------*@
-                <select asp-for="ChucVu" class="form-control">
+                <select asp-for="VeHuu" class="form-control">
+
                     <option value="Rồi">Rồi</option>
                     <option value="Chưa">Chưa</option>
+
                 </select>
-                @*---------------Dropdown List---------------------*@//
+                @*---------------Dropdown List---------------------*@
                 <span asp-validation-for="VeHuu" class="text-danger"></span>
             </div>
             <div class="form-group">
