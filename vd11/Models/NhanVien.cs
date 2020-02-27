@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace vd11.Models
 {
+    public enum ChuVu
+    {
+        Boss, Staff
+    }
     public enum GioiTinh
     {
         Nam, Nữ, ThứBa
@@ -18,6 +22,10 @@ namespace vd11.Models
     }
     public class NhanVien
     {
+        public NhanVien()
+        {
+            CongTy = new HashSet<CongTy>();
+        }
         [Key]
         public int NhanVienID { get; set; }
         [Column(TypeName ="ntext")]
@@ -33,7 +41,7 @@ namespace vd11.Models
         public GioiTinh GioiTinh { get; set; }
         [Required(ErrorMessage = "Lỗi xin hay điền lại")]
         [DisplayName("Chức Vụ")]
-        public int ChuVu { get; set; }
+        public ChuVu? ChucVu { get; set; }
         [Required(ErrorMessage = "Lỗi xin hay điền lại")]
         [DisplayName("Về Hưu?")]
         public VeHuu VeHuu { get; set; }

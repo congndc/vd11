@@ -1,0 +1,78 @@
+﻿@model vd11.Models.NhanVien
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>NhanVien</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TenNhanVien" class="control-label"></label>
+                <input asp-for="TenNhanVien" class="form-control" />
+                <span asp-validation-for="TenNhanVien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NamSinh" class="control-label"></label>
+                <input asp-for="NamSinh" class="form-control" />
+                <span asp-validation-for="NamSinh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GioiTinh" class="control-label"></label>
+                @*---------------Dropdown List---------------------*@
+                <select asp-for="ChucVu" class="form-control">
+
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                    <option value="ThứBa">ThứBa</option>
+
+                </select>
+                @*---------------Dropdown List---------------------*@
+                <span asp-validation-for="GioiTinh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ChucVu" class="control-label"></label>
+                @*---------------Dropdown List---------------------*@
+                <select asp-for="ChucVu" class="form-control">
+
+                    <option value="Boss">Boss</option>
+                    <option value="Staff">Staff</option>
+                </select>
+                @*---------------Dropdown List---------------------*@
+                <span asp-validation-for="ChucVu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VeHuu" class="control-label"></label>
+                @*---------------Dropdown List---------------------*@
+                <select asp-for="ChucVu" class="form-control">
+
+                    <option value="Rồi">Rồi</option>
+                    <option value="Chưa">Chưa</option>
+
+                </select>
+                @*---------------Dropdown List---------------------*@
+                <span asp-validation-for="VeHuu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThamNienID" class="control-label"></label>
+                <select asp-for="ThamNienID" class ="form-control" asp-items="ViewBag.ThamNienID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
