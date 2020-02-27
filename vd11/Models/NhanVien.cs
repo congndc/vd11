@@ -8,20 +8,23 @@ using System.Threading.Tasks;
 
 namespace vd11.Models
 {
+
     public enum ChuVu
     {
         Boss, Staff
-    }
-    public enum GioiTinh
-    {
-        Nam, Nữ, ThứBa
     }
     public enum VeHuu
     {
         Rồi, Chưa
     }
+    public enum GioiTinh
+    {
+        Nam, Nữ, ThứBa
+    }
+
     public class NhanVien
     {
+        
         public NhanVien()
         {
             CongTy = new HashSet<CongTy>();
@@ -46,9 +49,10 @@ namespace vd11.Models
         [DisplayName("Về Hưu?")]
         public VeHuu VeHuu { get; set; }
 
-        [DisplayName("Thâm Niên Làm Việc")]
+        [DisplayName("Thâm Niên Làm")]
         public int ThamNienID { get; set; }
         public ICollection<CongTy> CongTy { get; set; }
         public virtual ThamNien ThamNien { get; set; }
+
     }
 }

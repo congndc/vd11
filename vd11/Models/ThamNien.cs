@@ -5,15 +5,17 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace vd11.Models
 {
 
     public enum ThamNienLam
     {
         
-        Dưới_Một_Năm =1 ,
-        TừHaiNămĐến5Năm =2-5,
-        Trên5Năm=5-10
+        
+        Dưới1Năm = 1,
+        Từ1NămĐến5Năm =2,
+        Trên5Năm=5
     }
     public class ThamNien
     {
@@ -26,7 +28,7 @@ namespace vd11.Models
        
         [Key]
         public int ThamNienID { get; set; }
-        [DisplayName("Thâm Niên Làm Việc")]
+        [DisplayName("Thâm Niên Làm")]
         public ThamNienLam ThamNienLam { get; set; }
         [DisplayName("Lương")]
         public decimal? Luong { get; set; }
