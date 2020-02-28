@@ -33,87 +33,89 @@
 </head>
 <body>
     <div id="login-div">
-        @using (Html.BeginForm("autherize","Login",FormMethod.Post))
+        @using (Html.BeginForm("autherize", "Login", FormMethod.Post))
         {
-        <table>
-            <tr>
-                <td></td>
-                <td style="text-decoration:underline"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    @Html.LabelFor(@model => model.Email)
-                </td>
-                <td>
-                    @Html.EditorFor(@model => model.Email)
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    @Html.ValidationMessageFor(@model => model.Email)
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    @Html.LabelFor(@model => model.Password)
-                </td>
-                <td>
-                    @Html.EditorFor(@model => model.Password)
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    @Html.ValidationMessageFor(@model => model.Password)
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    @Html.LabelFor(@model => model.ConfirmPassword)
-                </td>
-                <td>
-                    @Html.EditorFor(@model => model.ConfirmPassword)
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    @Html.ValidationMessageFor(@model => model.ConfirmPassword)
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    @Html.LabelFor(@model => model.IsPassword)
-                </td>
-                <td>
-                    @Html.EditorFor(@model => model.IsPassword)
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    @Html.ValidationMessageFor(@model => model.IsPassword)
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td>
-                    <input type="submit" name="name" value="Login" class="b" />
-                    <input type="submit" name="name" value="Clear" class="a" />
-                    @*<input type="submit" name="name" value="Exit" />*@
+            <table>
+                <tr>
+                    <td></td>
+                    <td style="text-decoration:underline"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.LabelFor(@model => model.Email)
+                    </td>
+                    <td>
+                        @Html.EditorFor(@model => model.Email)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.ValidationMessageFor(@model => model.Email)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.LabelFor(@model => model.Password)
+                    </td>
+                    <td>
+                        @Html.EditorFor(@model => model.Password)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.ValidationMessageFor(@model => model.Password)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.LabelFor(@model => model.ConfirmPassword)
+                    </td>
+                    <td>
+                        @Html.EditorFor(@model => model.ConfirmPassword)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.ValidationMessageFor(@model => model.ConfirmPassword)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.LabelFor(@model => model.IsPassword)
+                    </td>
+                    <td>
+                        @Html.EditorFor(@model => model.IsPassword)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.ValidationMessageFor(@model => model.IsPassword)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="name" value="Login" class="b" />
+                        <input type="submit" name="name" value="Clear" class="a" />
+                        @*<input type="submit" name="name" value="Exit" />*@
 
-                </td>
+                    </td>
 
-            </tr>
-        </table>
+                </tr>
+            </table>
         }
     </div>
- 
+                      <td></td><td></td> <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                      <td></td><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+                      <td></td><td></td><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
 </body>
 </html>
