@@ -25,6 +25,7 @@ namespace vd11.Models
         [StringLength(50)]
         [DataType(DataType.Password)]
         [Required(ErrorMessage = "Lỗi ConfirmPassword")]
+        [Compare("Password")]
         public string ConfirmPassword { get; set; }
         [Required(ErrorMessage = "Lỗi IsPassword")]
         public bool IsPassword { get; set; }
