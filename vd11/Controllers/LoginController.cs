@@ -13,8 +13,12 @@ namespace vd11.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Autheautherize()
+        public IActionResult Autheautherize(vd11.Models.User userModel)
         {
+            using (LoginController login = new LoginController())
+            {
+
+            }
             return View();
         }
     }

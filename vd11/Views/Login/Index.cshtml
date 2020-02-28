@@ -28,7 +28,9 @@
             padding: 8px 8px;
             background-color: greenyellow;
         }
-
+         .field-validation-error{
+             color:red;
+         }
     </style>
 </head>
 <body>
@@ -70,7 +72,7 @@
                         @Html.ValidationMessageFor(@model => model.Password)
                     </td>
                 </tr>
-                <tr>
+                @*<tr>
                     <td></td>
                     <td>
                         @Html.LabelFor(@model => model.ConfirmPassword)
@@ -84,8 +86,8 @@
                     <td>
                         @Html.ValidationMessageFor(@model => model.ConfirmPassword)
                     </td>
-                </tr>
-                <tr>
+                </tr>*@
+                @*<tr>
                     <td></td>
                     <td>
                         @Html.LabelFor(@model => model.IsPassword)
@@ -99,7 +101,7 @@
                     <td>
                         @Html.ValidationMessageFor(@model => model.IsPassword)
                     </td>
-                </tr>
+                </tr>*@
                 <tr>
                     <td></td>
                     <td></td>
@@ -114,8 +116,8 @@
             </table>
         }
     </div>
-                      <td></td><td></td> <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-                      <td></td><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
-                      <td></td><td></td><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
 </body>
 </html>
