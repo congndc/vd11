@@ -1,0 +1,121 @@
+﻿
+@model vd11.Models.User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <style>
+        #login-div {
+          position:absolute;
+          border:2px solid #808080;
+            left:40%;
+            top:40%;
+        }
+        
+        .a {
+            width: auto;
+            padding: 8px 8px;
+            background-color:#22ff00
+        }
+         .b{
+            width: auto;
+            padding: 8px 8px;
+            background-color: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="login-div">
+        @using (Html.BeginForm("autherize", "Login", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td></td>
+                    <td style="text-decoration:underline"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.LabelFor(@model => model.Email)
+                    </td>
+                    <td>
+                        @Html.EditorFor(@model => model.Email)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.ValidationMessageFor(@model => model.Email)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.LabelFor(@model => model.Password)
+                    </td>
+                    <td>
+                        @Html.EditorFor(@model => model.Password)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.ValidationMessageFor(@model => model.Password)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.LabelFor(@model => model.ConfirmPassword)
+                    </td>
+                    <td>
+                        @Html.EditorFor(@model => model.ConfirmPassword)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.ValidationMessageFor(@model => model.ConfirmPassword)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.LabelFor(@model => model.IsPassword)
+                    </td>
+                    <td>
+                        @Html.EditorFor(@model => model.IsPassword)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.ValidationMessageFor(@model => model.IsPassword)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="name" value="Login" class="b" />
+                        <input type="submit" name="name" value="Clear" class="a" />
+                        @*<input type="submit" name="name" value="Exit" />*@
+
+                    </td>
+
+                </tr>
+            </table>
+        }
+    </div>
+                      <td></td><td></td> <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                      <td></td><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+                      <td></td><td></td><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
