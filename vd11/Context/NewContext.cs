@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using vd11.Models;
 
+
 namespace vd11.Context
 {
     public class NewContext:DbContext
@@ -16,6 +17,9 @@ namespace vd11.Context
         public DbSet<CongTy> CongTy { get; set; }
         public DbSet<NhanVien> NhanVien { get; set; }
         public DbSet<ThamNien> ThamNien { get; set; }
+        public DbSet<User> User { get; set; }
+        
+       
 
     }
 }
