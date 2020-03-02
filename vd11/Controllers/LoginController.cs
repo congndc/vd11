@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using vd11.Models;
+using vd11.Repository;
 
 namespace vd11.Controllers
 {
@@ -12,11 +14,12 @@ namespace vd11.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public IActionResult Autheautherize(vd11.Models.User userModel)
+        public IActionResult Login(User model)
         {
-            using (LoginController login = new LoginController())
+            if (ModelState.IsValid)
             {
+                
+
 
             }
             return View();
