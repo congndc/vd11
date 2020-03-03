@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Okta.AspNetCore;
 using vd11.Models;
 using vd11.Repository;
 
@@ -14,15 +15,15 @@ namespace vd11.Controllers
         {
             return View();
         }
-        public IActionResult Login(User model)
+        [HttpPost]
+        public IActionResult Login()
         {
-            if (ModelState.IsValid)
+            if (!HttpContext.User.Identity.IsAuthenticated)
             {
-                
-
-
+                return Challenge(OktaDefaults.MvcAuthenticationScheme);
             }
-            return View();
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }
