@@ -162,5 +162,13 @@ namespace vd11.Controllers
         {
             return _context.CongTy.Any(e => e.CongTyID == id);
         }
+
+       
+        [HttpPost]
+        public string Index(string searchString, bool notUsed)
+        {
+            return "From [HttpPost]Index: filter on " + searchString;
+        }
+   
     }
 }

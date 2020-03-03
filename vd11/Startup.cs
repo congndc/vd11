@@ -33,6 +33,7 @@ namespace vd11
             services.AddTransient<ICongTy, CongTyRepository>();
             services.AddTransient<INhanVien, NhanVienRepository>();
             services.AddTransient<IThamNien, ThamNienRepository>();
+            services.AddTransient<ILogin, LoginRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
